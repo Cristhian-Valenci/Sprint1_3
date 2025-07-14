@@ -6,12 +6,14 @@
     function buscarCaracter($palabras, $caracter) {
         foreach ($palabras as $palabra) {
             if (strpos($palabra, $caracter) !== false) { //strpos() busca la posicion de un caracter en un String sin importar may o min
-                return true;
-            } else {
-                return false;
+                return "El caracter se encuentra en las palabras";;
+            } 
             }
-        }
+            return "El caracter NO se encuentra en ninguna palabraa"; 
+        
     }
+
+    echo buscarCaracter($palabras, $caracter);
 
     
 ?>
