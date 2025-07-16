@@ -5,9 +5,9 @@
 
     function buscarCaracter($palabras, $caracter) {
        
-        for($i = 0; $i < count($palabras); $i++) {
+        foreach($palabras as $palabra) {
         
-            if (strpos($palabras[$i], $caracter) === false) {
+            if (strpos($palabra, $caracter) === false) {
                 return "Las palabras NO contienen el caracter";
             }
         }
