@@ -3,16 +3,20 @@
     $palabras = array("Colombia", "oscar", "tanteador");
     $caracter = "o";
 
-    function buscarCaracter( array $palabras, string $caracter) : String {
+    function buscarCaracter( array $palabras, string $caracter) : bool {
        
         foreach($palabras as $palabra) {
         
             if (strpos($palabra, $caracter) === false) {
-                return "Todas las palabras NO contienen el caracter";
+                return false;
             }
         }
-        return "Todas las palabras contienen el caracter";
+        return true;
     }
     
-    echo buscarCaracter($palabras, $caracter);
+    if (buscarCaracter($palabras, $caracter)) {
+        echo "Todas las palabras contienen el caracter";
+    } else {
+        echo "Todas las palabras NO contienen el caracter";
+    }
 ?>
